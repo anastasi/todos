@@ -1,16 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-async function fetchUsers(endpoint) {
-  const res = await fetch(endpoint);
-
-  if (!res.ok) {
-    throw new Error(res.status); // 404
-  }
-
-  const data = await res.json();
-  return data;
-}
+import { fetchUsers } from '../api';
 
 export default class UsersContainer extends React.Component {
   state = {
@@ -18,7 +8,7 @@ export default class UsersContainer extends React.Component {
   }
 
   componentDidMount() {
-    fetchUsers('https://jsonplaceholder.typicode.com/users')
+    fetchUsers()
       .then(data => {
         const users = data
         this.setState({ users })
