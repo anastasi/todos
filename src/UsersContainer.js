@@ -29,8 +29,8 @@ export default class UsersContainer extends React.Component {
   render() {
     return (
       <ul>
-        { this.state.users.map(user => <li>
-          <Link to={`/users/${user.id}`}>{user.name}</Link>
+        { this.state.users.map(user => <li key={user.id}>
+          <Link to={`/profile/${user.id}`}>{user.name}</Link>
           </li>)}
       </ul>
     )

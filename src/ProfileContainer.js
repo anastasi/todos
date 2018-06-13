@@ -22,7 +22,7 @@ export default class ProfileContainer extends React.Component {
     console.log(userId)
     fetchUserTodo('https://jsonplaceholder.typicode.com/todos/')
       .then(data => {
-        const userTodos = data
+        const userTodos = data.filter( todo => todo.userId == userId)
         this.setState({ userTodos })
       })
       .catch(err => console.log('Ooops, error', err.message))
@@ -33,7 +33,7 @@ export default class ProfileContainer extends React.Component {
       <ul>
        <h2>ProfileContainer {this.props.match.params.id}</h2>
        <ul>
-        { this.state.userTodos.map(todo => <li>
+        { this.state.userTodos.map(todo => <li key={todo.id}>
             {todo.title}
           </li>)}
       </ul>
