@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import UsersContainer from './UsersContainer';
+import ProfileContainer from './ProfileContainer';
 
 const ParamsExample = () => (
   <Router>
@@ -20,7 +22,8 @@ const ParamsExample = () => (
         </li>
       </ul>
 
-      <Route path="/:id" component={Child} />
+      <Route path="/users" component={UsersContainer} />
+      <Route path="/users/:id" component={ProfileContainer} />
 
       {/*
          It's possible to use regular expressions to control what param values should be matched.
@@ -34,12 +37,6 @@ const ParamsExample = () => (
       />
     </div>
   </Router>
-);
-
-const Child = ({ match }) => (
-  <div>
-    <h3>ID: {match.params.id}</h3>
-  </div>
 );
 
 const ComponentWithRegex = ({ match }) => (
