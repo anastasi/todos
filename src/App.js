@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Link } from "react-router-dom";
-import UsersContainer from './UsersContainer';
-import ProfileContainer from './ProfileContainer';
+import UsersContainer from './Containers/UsersContainer';
+import ProfileContainer from './Containers/ProfileContainer';
 
 const ParamsExample = () => (
   <div>
