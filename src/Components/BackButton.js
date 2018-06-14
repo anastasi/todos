@@ -2,7 +2,7 @@ import React from "react";
 
 class BackButton extends React.Component {
   static contextTypes = {
-    router: () => true, // replace with PropTypes.object if you use them
+    router: () => true,
   }
 
   render() {

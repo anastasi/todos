@@ -1,6 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { fetchUsers } from '../api';
+import List from '../Components/List';
+import UserListItem from '../Components/UserListItem';
 
 export default class UsersContainer extends React.Component {
   state = {
@@ -18,11 +19,10 @@ export default class UsersContainer extends React.Component {
 
   render() {
     return (
-      <ul>
-        { this.state.users.map(user => <li key={user.id}>
-          <Link to={`/profile/${user.id}`}>{user.name}</Link>
-          </li>)}
-      </ul>
+      <List
+        items={this.state.users}
+        title="Users"
+        listItem={UserListItem} />
     )
   }
 }
