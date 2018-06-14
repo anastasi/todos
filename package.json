@@ -2,7 +2,7 @@
   "name": "todos",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://anastasi.github.io/todos",
+  "homepage": "https://rebels-anastasia.surge.sh",
   "dependencies": {
     "gh-pages": "^1.2.0",
     "materialize-css": "^0.100.2",
@@ -17,7 +17,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "surge"
   }
 }
