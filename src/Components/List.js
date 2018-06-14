@@ -1,6 +1,7 @@
 import React from 'react';
 import BackButton from "../Components/BackButton";
 import { Row, Col, Collection } from 'react-materialize';
+import "../styles/List.css";
 
 const List = props => {
   const ListItem = props.listItem
@@ -9,12 +10,13 @@ const List = props => {
 
   return (
     <Row>
-      <Col s={4} offset='s4' className='grid-example'>
-        <h2>{ props.title }</h2>
+      <Col l={4} s={12} offset='l4'>
+        <h2 className="Title">{ props.title }</h2>
         { showBackButton &&
           <BackButton/>
         }
-
+      </Col>
+      <Col l={4} s={12} offset='l4' className='grid'>
         <Collection>
           { props.items.map(item =>
             <ListItem item={item} key={item.id}/>

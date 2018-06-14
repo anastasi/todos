@@ -1,4 +1,6 @@
 import React from "react";
+import { Button } from 'react-materialize';
+import "../styles/BackButton.css";
 
 class BackButton extends React.Component {
   static contextTypes = {
@@ -7,11 +9,12 @@ class BackButton extends React.Component {
 
   render() {
     return (
-      <button
-        className="button icon-left"
+      <Button
+        waves='purple'
+        className="button icon-left BackButton"
         onClick={this.context.router.history.goBack}>
           Back
-      </button>
+      </Button>
     )
   }
 }

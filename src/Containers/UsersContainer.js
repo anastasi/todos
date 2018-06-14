@@ -21,7 +21,7 @@ export default class UsersContainer extends React.Component {
     return (
       <List
         items={this.state.users}
-        title="Users"
+        title="Rebels"
         listItem={UserListItem} />
     )
   }

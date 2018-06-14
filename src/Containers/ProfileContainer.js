@@ -20,11 +20,13 @@ export default class ProfileContainer extends React.Component {
   }
 
   render() {
+    const { username } = this.props.location.state
+
     return (
       <div>
         <List
           items={this.state.userTodos}
-          title="Profile"
+          title={ username }
           listItem={ProfileListItem}
           showBackButton="true" />
       </div>

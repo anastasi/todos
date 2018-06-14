@@ -4,6 +4,7 @@ body {
   font-family: sans-serif;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 @font-face {
   font-family: "Material Icons";
   font-style: normal;
@@ -39,4 +40,8 @@ body {
 
   /* Support for IE. */
   font-feature-settings: "liga";
+}
+
+p, a, li, div, button, h1, h2, h3 {
+  font-family: Source Sans Pro,sans-serif;
 }

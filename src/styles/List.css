@@ -1,0 +1,20 @@
+.ListItem{
+  background-color: #fff;
+  line-height: 1.5rem;
+  padding: 20px;
+  margin: 0;
+  border-bottom: 1px solid #e0e0e0;
+  background: linear-gradient(90deg,#383d7d,#893992);
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.grid .collection .ListItem.collection-item {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 20px;
+}
+
+.Title {
+  float: left;
+  font-size: 40px;
+}
