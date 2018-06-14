@@ -3,7 +3,13 @@ import { CollectionItem, Icon } from 'react-materialize';
 
 const ProfileListItem = props => (
   <CollectionItem>
-    {props.item.title} <Icon right small>chevron_right</Icon>
+    <Icon left small>{ props.item.completed ? (
+        'check_box'
+      ) : (
+        'check_box_outline_blank'
+      )}
+    </Icon>
+    {props.item.title}
   </CollectionItem>
 )
 
