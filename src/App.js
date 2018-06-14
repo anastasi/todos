@@ -5,7 +5,7 @@ import ProfileContainer from './Containers/ProfileContainer';
 
 const ParamsExample = () => (
   <div>
-    <Route path="/users" component={UsersContainer} />
+    <Route path="/" component={UsersContainer} />
     <Route path="/profile/:id" component={ProfileContainer} />
   </div>
 );
