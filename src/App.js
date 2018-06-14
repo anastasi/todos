@@ -1,13 +1,13 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import UsersContainer from './Containers/UsersContainer';
 import ProfileContainer from './Containers/ProfileContainer';
 
 const ParamsExample = () => (
-  <div>
-    <Route path="/" component={UsersContainer} />
+  <Switch>
     <Route path="/profile/:id" component={ProfileContainer} />
-  </div>
+    <Route path="/" component={UsersContainer} />
+  </Switch>
 );
 
 export default ParamsExample;
